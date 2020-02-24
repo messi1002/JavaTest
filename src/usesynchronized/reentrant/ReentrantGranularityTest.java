@@ -6,7 +6,6 @@ package usesynchronized.reentrant;
  * @description: 可重入粒度测试3——父类
  */
 public class ReentrantGranularityTest {
-    
     public synchronized void doSomething() {
         System.out.println("我是父类方法");
     }

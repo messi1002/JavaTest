@@ -10,7 +10,8 @@ public class Situation4 implements Runnable {
     
     @Override
     public void run() {
-        // 线程的默认名字是从Thread-0(Thread-1、Thread-2、...)开始
+        // 让线程0运行method1()方法，线程1运行method2()方法。
+        // 线程的默认名是从Thread-0(Thread-1、Thread-2、...)开始。
         if (Thread.currentThread().getName().equals("Thread-0")) {
             method1();
         }

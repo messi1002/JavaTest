@@ -8,16 +8,17 @@ package usesynchronized.reentrant;
 public class ReentrantGranularityTest1 {
     int a = 0;
     
-    public static void main(String[] args) {
-        ReentrantGranularityTest1 test1 = new ReentrantGranularityTest1();
-        test1.method();
-    }
-    
     private synchronized void method() {
         System.out.println("a = " + a);
         if (a == 0) {
             a++;
+            // 调用方法本身
             method();
         }
+    }
+    
+    public static void main(String[] args) {
+        ReentrantGranularityTest1 test1 = new ReentrantGranularityTest1();
+        test1.method();
     }
 }

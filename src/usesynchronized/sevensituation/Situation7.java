@@ -21,7 +21,7 @@ public class Situation7 implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        // 方法抛出异常后，jvm帮我们释放了锁，不需要手动释放锁。
+        // 方法抛出异常后，JVM帮我们释放了锁，不需要手动释放锁。
         // 抛出运行时异常，不强制要求捕获。
         throw new RuntimeException();
     }

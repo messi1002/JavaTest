@@ -13,7 +13,7 @@ public class SynchronizedObjectLock1 implements Runnable {
     
     @Override
     public void run() {
-//        // 默认用this(当前对象)作为锁
+//        // 默认用this(当前对象)作为锁对象
 //        // 保护以下代码块串行执行
 //        synchronized (this) {
 //            System.out.println(Thread.currentThread().getName() + "开始执行");
